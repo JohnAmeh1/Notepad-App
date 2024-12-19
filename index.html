@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="overflow-hidden">
+<div class="container mx-auto p-6 h-screen">
+    <h1 class="text-3xl font-bold mb-4">Notepad App</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+        <form id="noteForm" class="space-y-4">
+            <div>
+                <label for="title" class="block text-lg font-medium">Title</label>
+                <input type="text" id="title" class="block w-full mt-1 p-2 border rounded" required>
+            </div>
+            <div>
+                <label for="content" class="block text-lg font-medium">Content</label>
+                <textarea id="content" class="block w-full mt-1 p-2 border rounded" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Create Note</button>
+        </form>
+        
+        <div id="notesContainer" class="mt-6 md:mt-0 space-y-4 overflow-y-auto h-full"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
